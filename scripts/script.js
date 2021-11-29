@@ -6,6 +6,8 @@ module.exports = async () => {
     console.log(account);
 
     const wrappedEther = await WrappedEther.deployed();
+
+    console.log(wrappedEther.methods);
   } catch (error) {
     console.error(error);
   }
