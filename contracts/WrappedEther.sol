@@ -7,4 +7,8 @@ contract WrappedEther is ERC20 {
     constructor() ERC20("WRAPPED ETHER", "WETH") {
         _mint(msg.sender, 1 * 10**18);
     }
+
+    function mint(uint256 amount) public payable {}
+
+    function withdraw(uint256 amount) public {}
 }
