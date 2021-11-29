@@ -1,0 +1,23 @@
+{
+  "name": "wrapped-ether",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BronzeDisc/wrapped-ether.git"
+  },
+  "keywords": [],
+  "author": "Gustavo Fernandes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BronzeDisc/wrapped-ether/issues"
+  },
+  "homepage": "https://github.com/BronzeDisc/wrapped-ether#readme"
+}
