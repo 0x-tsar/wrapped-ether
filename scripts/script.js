@@ -7,19 +7,19 @@ module.exports = async () => {
 
     const wrappedEther = await WrappedEther.deployed();
 
-    // const totalWether = await wrappedEther.totalSupplyWether();
-    // console.log(parseInt(totalWether));
+    const totalWether = await wrappedEther.totalSupplyWether();
+    console.log(parseInt(totalWether));
 
-    // let myWeth = await wrappedEther.balanceOf(account);
-    // console.log(`before: ${myWeth}`);
+    let myWeth = await wrappedEther.balanceOf(account);
+    console.log(`before: ${myWeth}`);
 
     const value = web3.utils.toWei("0.1");
-    // await wrappedEther.mint({ from: account, value: value });
-    // // await wrappedEther.mint().send({ from: account, value: value });
-    // console.log(myWeth);
+    await wrappedEther.mint({ from: account, value: value });
+    // await wrappedEther.mint().send({ from: account, value: value });
+    console.log(myWeth);
 
-    // myWeth = await wrappedEther.balanceOf(account);
-    // console.log(`after: ${myWeth}`);
+    myWeth = await wrappedEther.balanceOf(account);
+    console.log(`after: ${myWeth}`);
 
     console.log(`NOW WITHDRAW IT`);
 
