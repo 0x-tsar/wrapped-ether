@@ -19,6 +19,7 @@ contract WrappedEther is ERC20 {
             'You don"t own that amount of Ethers'
         );
 
+        _burn(msg.sender, amount);
         payable(msg.sender).transfer(amount);
         totalSupplyWether -= amount;
     }
