@@ -4,11 +4,13 @@ pragma solidity ^0.8.4;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract WrappedEther is ERC20 {
-    constructor() ERC20("WRAPPED ETHER", "WETH") {
-        _mint(msg.sender, 1 * 10**18);
+    constructor() ERC20("WRAPPED ETHER", "WETH") {}
+
+    function mint() public payable {
+        _mint(msg.sender, msg.value);
     }
 
-    function mint(uint256 amount) public payable {}
-
-    function withdraw(uint256 amount) public {}
+    function withdraw(uint256 amount) public {
+        require(amount <= balanceOf(msg.sender));
+    }
 }
