@@ -5,6 +5,6 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract WrappedEther is ERC20 {
     constructor() ERC20("WRAPPED ETHER", "WETH") {
-        mint(1 * 10**18);
+        _mint(msg.sender, 1 * 10**18);
     }
 }
