@@ -11,7 +11,8 @@ module.exports = async () => {
     console.log(`before: ${myWeth}`);
 
     const value = web3.utils.toWei("0.1");
-    await wrappedEther.mint().send({ from: account, value: value });
+    await wrappedEther.mint({ from: account, value: value });
+    // await wrappedEther.mint().send({ from: account, value: value });
     console.log(myWeth);
 
     myWeth = await wrappedEther.balanceOf(account);
