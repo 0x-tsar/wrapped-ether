@@ -7,7 +7,8 @@ module.exports = async () => {
 
     const wrappedEther = await WrappedEther.deployed();
 
-    console.log((await wrappedEther.totalSupplyWether()).toNumber());
+    const totalWether = await wrappedEther.totalSupplyWether();
+    console.log(parseInt(totalWether));
 
     // let myWeth = await wrappedEther.balanceOf(account);
     // console.log(`before: ${myWeth}`);
